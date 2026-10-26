@@ -1,0 +1,43 @@
+# ==========================================
+# TANTO Control Deck - Configuration
+# ==========================================
+# Copy this file to config.yaml and fill in your details.
+# WARNING: Never commit your real password to GitHub!
+
+server:
+  host: "127.0.0.1"          # IP of your BF2142 server
+  rcon_port: 4711            # RCON port (usually 4711)
+  rcon_password: "CHANGE_ME" # Your RCON password from serversettings.con
+  name: "My BF2142 Server"   # Display name in the UI
+  mock: false                # Set to true to test UI without a real server
+
+monitoring:
+  player_refresh_sec: 3
+  connection_retry_sec: 10
+
+# Optional: Process Manager (auto-restart)
+# Only enable if running on the same PC as the game server
+process:
+  enabled: false
+  exe_path: "C:/Path/To/BF2142_w32ded.exe"
+  work_dir: "C:/Path/To/BF2142"
+  args: ["+config", "mods/bf2142/settings/serversettings.con", "+maplist", "mods/bf2142/settings/maplist.con", "+dedicated"]
+  check_interval_sec: 10
+  restart_delay_sec: 15
+  max_restarts_per_hour: 5
+  stdout_log: "logs/bf2142_stdout.log"
+
+maplist:
+  path: "mods/bf2142/settings/maplist.con"
+  auto_save: false
+
+broadcast:
+  enabled: false
+  interval_sec: 300
+  messages:
+    - "Welcome to the server!"
+    - "Play fair, respect other players!"
+
+logging:
+  level: "INFO"
+  file: "logs/tanto.log"

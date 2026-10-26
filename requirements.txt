@@ -1,0 +1,6 @@
+nicegui
+rconnet
+pydantic
+pyyaml
+loguru
+psutil
