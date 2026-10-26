@@ -47,7 +47,7 @@ RCON enabled in your serversettings.con (`sv.rconPassword` "your_password").
 ## Steps
 Install **Python 3.12+**.
 
-Clone the repo: git clone https://github.com/yourname/tanto-control-deck.git
+Clone the repo: git clone https://github.com/TONDO96IT/tanto-control-deck.git
 
 Install dependencies:
 pip install -r requirements.txt
